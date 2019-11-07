@@ -13,29 +13,40 @@ import UIKit
 class MediaView: UIView {
     
     lazy var mainTableView: UITableView = {
-        let tableView = UITableView()
-        
+        let tableView = UITableView(frame: frame, style: .grouped)
+        tableView.backgroundColor = .yellow
+        tableView.register(DetailCell.self, forCellReuseIdentifier: "DetailCell")
+        tableView.contentMode = .scaleAspectFit
         return tableView
     }()
     
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
-        addSubview(mainTableView)
-        setConstraints()
+        commonInit()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setConstraints()
+        commonInit()
     }
     
+    func commonInit(){
+        setUpViews()
+        contentMode = .scaleAspectFit
+        translatesAutoresizingMaskIntoConstraints = false
+    }
+}
+extension MediaView {
+    func setUpViews(){
+         setConstraints()
+    }
     func setConstraints() {
+        addSubview(mainTableView)
         mainTableView.translatesAutoresizingMaskIntoConstraints = false
         mainTableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
         mainTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor).isActive = true
         mainTableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor).isActive = true
         mainTableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor).isActive = true
+
     }
-
-
 }
