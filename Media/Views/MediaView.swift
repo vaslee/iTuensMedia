@@ -7,8 +7,7 @@
 //
 
 import UIKit
-//import ChamelonFramework
-
+import ChameleonFramework
 
 class MediaView: UIView {
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 
 class MediaViewController: UIViewController {
@@ -93,7 +94,10 @@ extension MediaViewController: UITableViewDataSource, UITableViewDelegate {
                         if let mediaType = mediaInfos.first?.kind{
                             cell.typeLabel.text = mediaType
                         }
-                    
+
+        let color = RandomFlatColor()
+        cell.backgroundColor = color
+        cell.textLabel?.textColor = ContrastColorOf(color, returnFlat: true)
         return cell
     }
 

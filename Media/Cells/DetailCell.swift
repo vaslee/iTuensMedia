@@ -14,9 +14,9 @@ class DetailCell: UITableViewCell {
         label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         label.text = "I'm here!"
         label.textAlignment = .center
-        label.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
+       // label.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
         label.layer.cornerRadius = 2.5
-        label.layer.borderWidth = 1
+        label.layer.borderWidth = 0.5
         label.adjustsFontSizeToFitWidth = true
         
         return label
@@ -27,9 +27,9 @@ class DetailCell: UITableViewCell {
            label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
            label.text = "I'm!"
            label.textAlignment = .center //把字体放在中间
-           label.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
+          // label.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
            label.layer.cornerRadius = 2.5
-           label.layer.borderWidth = 1
+        label.layer.borderWidth = 0.5
            label.adjustsFontSizeToFitWidth = true
            
          return label
@@ -92,7 +92,7 @@ extension DetailCell {
         typeLabel.topAnchor.constraint(equalToSystemSpacingBelow: nameLabel.bottomAnchor, multiplier: 2.5).isActive = true
         typeLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: dividerView.trailingAnchor, multiplier: 1.0).isActive = true
         typeLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        typeLabel.widthAnchor.constraint(equalToConstant: 170).isActive = true
+        typeLabel.widthAnchor.constraint(equalToConstant: 200).isActive = true
         
     }
     
