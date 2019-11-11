@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		65DB5F0EA6BDC19E2E3C04E8 /* Pods_Media.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12D37F1DA1C6694CE043E8D /* Pods_Media.framework */; };
+		9001169E2374DD0B00D42082 /* ItemClickedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9001169D2374DD0B00D42082 /* ItemClickedViewController.swift */; };
+		900116A02374DDD500D42082 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9001169F2374DDD500D42082 /* ItemDetailView.swift */; };
 		90D028F12369F60D00CE0749 /* MediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D028F02369F60D00CE0749 /* MediaView.swift */; };
 		90D4E80C23689CA8007C9C7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4E80B23689CA8007C9C7D /* AppDelegate.swift */; };
 		90D4E80E23689CA8007C9C7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4E80D23689CA8007C9C7D /* SceneDelegate.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9001169D2374DD0B00D42082 /* ItemClickedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemClickedViewController.swift; sourceTree = "<group>"; };
+		9001169F2374DDD500D42082 /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 		90D028F02369F60D00CE0749 /* MediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaView.swift; sourceTree = "<group>"; };
 		90D4E80823689CA8007C9C7D /* Media.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Media.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D4E80B23689CA8007C9C7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				90D4E80F23689CA8007C9C7D /* MediaViewController.swift */,
+				9001169D2374DD0B00D42082 /* ItemClickedViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				90D028F02369F60D00CE0749 /* MediaView.swift */,
+				9001169F2374DDD500D42082 /* ItemDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -280,11 +286,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				900116A02374DDD500D42082 /* ItemDetailView.swift in Sources */,
 				90FD8C3A236C7F00003F47DD /* NetworkHelper.swift in Sources */,
 				90D4E81023689CA8007C9C7D /* MediaViewController.swift in Sources */,
 				90D4E80C23689CA8007C9C7D /* AppDelegate.swift in Sources */,
 				90FD8C36236C7EE3003F47DD /* AppError.swift in Sources */,
 				90FD8C3F236D0161003F47DD /* Media.swift in Sources */,
+				9001169E2374DD0B00D42082 /* ItemClickedViewController.swift in Sources */,
 				90FD8C3C236C7F1B003F47DD /* MediaAPIClient.swift in Sources */,
 				90D4E82223689FA3007C9C7D /* DetailCell.swift in Sources */,
 				90D028F12369F60D00CE0749 /* MediaView.swift in Sources */,

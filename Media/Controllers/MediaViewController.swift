@@ -86,10 +86,6 @@ extension MediaViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = mediaView.mainTableView.dequeueReusableCell(withIdentifier: "DetailCell", for: indexPath) as? DetailCell else { fatalError("DetailCell error") }
         
-//                 let cellInfo = mediaInfos[indexPath.row]
-//                cell.nameLabel.text = cellInfo.name
-//                    getItemImage(urlString: mediaInfos.first?.artworkUrl100 ?? "no Image", imageView: cell.productImage)
-//                cell.typeLabel.text = mediaInfos.first?.kind
                        let mediaItem = mediaInfos[indexPath.row]
         cell.nameLabel.text = mediaItem.artistName
                         getItemImage(urlString: mediaItem.artworkUrl100, imageView: cell.productImage)
@@ -104,10 +100,17 @@ extension MediaViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         mediaView.mainTableView.deselectRow(at: indexPath, animated: true)
+        let mediaItem = mediaInfos[indexPath.row]
+             let itemDetailViewController = ItemClickedViewController.init(item: mediaItem)
+               itemDetailViewController.modalPresentationStyle = .overCurrentContext
+        itemDetailViewController.modalTransitionStyle = .flipHorizontal
+               self.present(itemDetailViewController, animated: true, completion: nil)
+             
+           
     }
     
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-      return "Media Type: Music Video"
+      return "Media Type: iOS Apps"
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

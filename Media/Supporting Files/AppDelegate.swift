@@ -11,20 +11,19 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-   // var blockRotation: Bool = false
+    var window: UIWindow?
 
-//    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
-//        if blockRotation {
-//            return .all
-//        } else {
-//            return .portrait
-//        }
-//    }
+
+     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+       
+         window =  UIWindow.init(frame: UIScreen.main.bounds)
+         let mediaViewController = MediaViewController()
+         let navigationController = UINavigationController(rootViewController: mediaViewController)
+         window?.rootViewController = navigationController
+         window?.makeKeyAndVisible()
+       return true
+     }
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
-    }
 
     // MARK: UISceneSession Lifecycle
 

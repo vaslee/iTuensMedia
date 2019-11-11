@@ -12,7 +12,7 @@ final class MediaAPIClient {
     
     static func searchMedia(completionHandler: @escaping (AppError?, [Media]?) -> Void) {
         
-        NetworkHelper.shared.performDataTask(endpointURLString: "https://rss.itunes.apple.com/api/v1/us/apple-music/coming-soon/all/10/explicit.json", httpMethod: "GET", httpBody: nil, handler: { (appError, data) in
+        NetworkHelper.shared.performDataTask(endpointURLString: "https://rss.itunes.apple.com/api/v1/us/ios-apps/new-apps-we-love/all/10/explicit.json", httpMethod: "GET", httpBody: nil, handler: { (appError, data) in
             if let appError = appError {
                 completionHandler(appError, nil)
             }
